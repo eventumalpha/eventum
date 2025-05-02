@@ -2,24 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Eventum Playground</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Eventum Shield Playground</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="glitch.css">
 </head>
 <body>
-  <main class="container">
-    <h1 class="glitch" data-text="Encryption Playground">Encryption Playground</h1>
-    <textarea id="input" placeholder="Enter message..."></textarea>
-    <button onclick="encrypt()">Encrypt</button>
-    <pre id="output"></pre>
-    <a href="index.html" class="btn">Back to Launch</a>
-  </main>
 
-  <script>
-    function encrypt() {
-      const text = document.getElementById("input").value;
-      const encrypted = btoa(text.split('').reverse().join(''));
-      document.getElementById("output").innerText = encrypted;
-    }
-  </script>
+  <div class="container">
+
+    <h1 class="glitch" data-text="Encryption Playground">Encryption Playground</h1>
+
+    <label class="toggle-bank">
+      <input type="checkbox" id="bankToggle"> Bank Mode
+    </label>
+
+    <textarea id="input" placeholder="Enter message..." rows="3"></textarea>
+    <button class="btn neon" onclick="encrypt()">Encrypt</button>
+    <pre id="output" class="output"></pre>
+
+    <!-- Live flow animation -->
+    <div id="flow" class="flow">
+      <div class="client">You ▶</div>
+      <div class="server">🔐</div>
+      <div class="client">▶ You</div>
+    </div>
+
+    <a href="index.html" class="btn neon">Back to Launch</a>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
