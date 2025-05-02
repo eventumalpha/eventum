@@ -1,35 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eventum Shield — Encrypt the Future</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="glitch.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Eventum Shield – Encrypt the Future</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="glitch.css">
 </head>
 <body>
-  <div class="preloader">Encrypting...</div>
 
-  <main class="container">
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="hero-shield"></div>
+    <p class="loading-text glitch" data-text="Loading...">Loading...</p>
+  </div>
+
+  <!-- Main Content -->
+  <header class="hero" id="top" style="display:none;">
+    <div class="hero-shield"></div>
     <h1 class="glitch" data-text="Eventum Shield">Eventum Shield</h1>
-    <p class="subtitle">Post-Quantum Encryption for a Post-Truth World.</p>
-
-    <form action="https://formspree.io/f/yourcode" method="POST" class="signup-form">
-      <input type="email" name="email" placeholder="Join the encrypted list" required />
-      <button type="submit">Encrypt Me</button>
-    </form>
-
-    <a href="playground.html" class="btn">Try the Playground</a>
-
+    <p class="subtitle typing">Post-Quantum Encryption for a Post-Truth World.</p>
+    <div class="hero-cta">
+      <a href="#features" class="btn neon">Why Eventum</a>
+      <a href="playground.html" class="btn neon">Try Playground</a>
+    </div>
     <label class="toggle-sound">
       <input type="checkbox" id="soundToggle"> Ambient Sound
     </label>
-  </main>
+    <audio id="ambient" loop>
+      <source src="ambient.mp3" type="audio/mpeg">
+    </audio>
+  </header>
 
-  <audio id="ambient" loop>
-    <source src="ambient.mp3" type="audio/mpeg">
-  </audio>
+  <!-- Why Eventum -->
+  <section id="features" class="features-grid">
+    <h2>Why Eventum</h2>
+    <div class="grid">
+      <div class="card"><h3>Quantum-Safe</h3><p>Kyber &amp; Dilithium by NIST-standard.</p></div>
+      <div class="card"><h3>Bank-Grade</h3><p>Opt-in double encryption toggle.</p></div>
+      <div class="card"><h3>Zero-Knowledge</h3><p>No keys stored server-side.</p></div>
+      <div class="card"><h3>Modular</h3><p>Swap in new algorithms anytime.</p></div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="how" class="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step"><div class="icon">🔑</div><p>Generate Post-Quantum Keys</p></div>
+      <div class="step"><div class="icon">🔒</div><p>Encrypt Locally in Browser</p></div>
+      <div class="step"><div class="icon">🚀</div><p>Transmit Securely Over Network</p></div>
+    </div>
+  </section>
 
   <script src="script.js"></script>
 </body>
 </html>
+null
+
