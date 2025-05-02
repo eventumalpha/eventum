@@ -1,115 +1,49 @@
-/* Global */
-* { box-sizing: border-box; margin: 0; padding: 0; }
 body {
-  background: linear-gradient(#000010, #0f001f);
-  font-family: 'Orbitron', sans-serif;
-  color: #0ff; overflow-x: hidden;
-}
-
-/* Preloader */
-#preloader {
-  position: fixed; inset: 0;
-  background: #000; display: flex;
-  flex-direction: column; justify-content: center; align-items: center;
-  z-index: 100;
-}
-.loading-text { margin-top: 1rem; font-size: 1.2rem; }
-
-/* Hero */
-.hero {
-  display: none; /* shown by JS */
-  text-align: center; padding: 4rem 2rem;
-  position: relative;
-}
-.hero-shield {
-  width: 120px; height: 120px;
-  background: url('shield.svg') center/contain no-repeat;
-  margin: 0 auto 1rem;
-  animation: shield-glow 3s infinite ease-in-out;
-}
-@keyframes shield-glow {
-  0%,100% { filter: drop-shadow(0 0 4px #0ff); }
-  50% { filter: drop-shadow(0 0 16px #0ff); transform: scale(1.05); }
-}
-.subtitle { font-size: 1.2rem; margin-bottom: 1.5rem; }
-.btn.neon {
-  display: inline-block; margin: .5rem;
-  padding: .8rem 1.2rem; background: #0ff; color: #000;
-  box-shadow: 0 0 8px #0ff; text-decoration: none; font-weight: bold;
-  transition: box-shadow .3s;
-}
-.btn.neon:hover { box-shadow: 0 0 20px #0ff, 0 0 30px #0ff; }
-
-/* Typing effect */
-.typing {
-  border-right: .12em solid #0ff; overflow: hidden; white-space: nowrap;
-  animation: typing 4s steps(40) 1, blink .75s step-end infinite;
-}
-@keyframes typing { from { width: 0; } to { width: 100%; } }
-@keyframes blink { 50% { border-color: transparent; } }
-
-/* Sound toggle */
-.toggle-sound { display: block; margin-top: 1rem; font-size: .9rem; }
-
-/* Features Grid */
-.features-grid {
-  padding: 3rem 1rem; background: #000010; text-align: center;
-}
-.features-grid .grid {
-  display: grid; gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  margin-top: 2rem;
-}
-.features-grid .card {
-  padding: 1.5rem; border: 1px solid #0ff;
-  transition: background .3s, transform .3s;
-}
-.features-grid .card:hover {
-  background: rgba(0,255,255,0.1); transform: translateY(-5px);
-}
-
-/* How It Works */
-.how-it-works {
-  padding: 3rem 1rem; background: #0f001f; text-align: center;
-}
-.how-it-works .steps {
-  display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem;
-}
-.how-it-works .step {
-  max-width: 150px; animation: fadeInUp .8s ease both;
-}
-.how-it-works .step .icon {
-  font-size: 2.5rem; margin-bottom: .5rem;
-}
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Container for Playground */
-.container {
-  max-width: 500px; margin: 3rem auto; text-align: center;
-}
-textarea, .output {
-  width: 100%; padding: .8rem; margin: .5rem 0;
-  background: #000; color: #0ff; border: 1px solid #0ff;
-  font-family: monospace; font-size: 1rem;
-}
-.toggle-bank {
-  display: block; margin: 1rem 0; font-size: .9rem;
-}
-.flow {
-  display: flex; justify-content: space-around; align-items: center;
-  margin: 2rem auto; max-width: 400px; opacity: .5;
-  transition: opacity .5s;
-}
-.flow.active { opacity: 1; animation: flowAnim 1s ease-in-out; }
-@keyframes flowAnim {
-  0%,100% { transform: translateX(0); }
-  50% { transform: translateX(10px); }
-}
-
-  align-items: center;
+  background-color: #0e0e0e;
+  color: #fff;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
   justify-content: center;
-  z-index: 99;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 600px;
+  background: #1c1c1c;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #00ffcc33;
+}
+
+textarea {
+  width: 100%;
+  height: 120px;
+  margin-bottom: 1rem;
+  background: #222;
+  color: #0f0;
+  border: none;
+  border-radius: 6px;
+  padding: 1rem;
+  resize: none;
+  font-size: 1rem;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #00ffcc;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #00ccaa;
 }
