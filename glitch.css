@@ -1,11 +1,6 @@
-.glitch {
-    position: relative;
-    color: white;
-    font-size: 3rem;
-    animation: flicker 1.5s infinite alternate;
-}
-
-@keyframes flicker {
-    from { opacity: 1; }
-    to { opacity: 0.6; }
-}
+.glitch {  position: relative;  color: #0ff;  animation: flicker 1.5s infinite;}
+.glitch::before,.glitch::after {  content: attr(data-text);  position: absolute;  left: 0;  top: 0;  width: 100%;}
+.glitch::before {  left: 2px;  text-shadow: -2px 0 red;  clip: rect(0, 900px, 0, 0);  animation: glitch 1s infinite linear alternate-reverse;}
+.glitch::after {  left: -2px;  text-shadow: -2px 0 blue;  clip: rect(0, 900px, 0, 0);  animation: glitch2 1s infinite linear alternate-reverse;}
+@keyframes glitch {  0% { clip: rect(0, 9999px, 0, 0); }  10% { clip: rect(10px, 9999px, 50px, 0); }  20% { clip: rect(85px, 9999px, 140px, 0); }  30% { clip: rect(40px, 9999px, 90px, 0); }  100% { clip: rect(0, 9999px, 0, 0); }}
+@keyframes glitch2 {  0% { clip: rect(0, 9999px, 0, 0); }  10% { clip: rect(60px, 9999px, 120px, 0); }  20% { clip: rect(10px, 9999px, 40px, 0); }  30% { clip: rect(90px, 9999px, 130px, 0); }  100% { clip: rect(0, 9999px, 0, 0); }}
