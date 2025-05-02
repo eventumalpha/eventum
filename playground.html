@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Eventum Encryption Playground</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventum Playground</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <h1>Eventum Encryption Playground</h1>
-    <textarea id="inputText" placeholder="Enter your message..."></textarea>
-    <button onclick="encrypt()">Encrypt</button>
-    <h3>Encrypted Output:</h3>
-    <textarea id="outputText" readonly></textarea>
+    <textarea id="input" placeholder="Type your message..."></textarea>
+    <button onclick="encryptMessage()">Encrypt</button>
+    <textarea id="output" placeholder="Encrypted message..." readonly></textarea>
   </div>
-  <script src="script.js"></script>
-</body>
-</html>
 
+  <script>
+    function encryptMessage() {
+      const input = document.getElementById('input').value;
+      if (!input.trim()) {
+        alert('Please enter a message to encrypt.');
+        return;
+      }
 
+      // Basic demonstration of encryption: reverse the string and base64 encode
+      const reversed = input.split('').reverse().join('');
+      const encrypted = btoa(reversed);
 
-  <script src="script.js"></script>
+      document.getElementById('output').value = encrypted;
+    }
+  </script>
 </body>
 </html>
