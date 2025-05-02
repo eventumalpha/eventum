@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Eventum Playground</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1 class="glitch" data-text="Encryption Playground">Encryption Playground</h1>
+    <textarea id="input" placeholder="Enter message..."></textarea>
+    <button onclick="encrypt()">Encrypt</button>
+    <pre id="output"></pre>
+    <a href="index.html" class="btn">Back to Launch</a>
+  </main>
+
+  <script>
+    function encrypt() {
+      const text = document.getElementById("input").value;
+      const encrypted = btoa(text.split('').reverse().join(''));
+      document.getElementById("output").innerText = encrypted;
+    }
+  </script>
+</body>
+</html>
