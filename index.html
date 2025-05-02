@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Eventum Shield Playground</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="glitch.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eventum Shield — Encrypt the Future</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="glitch.css" />
 </head>
 <body>
-    <div class="glitch-wrapper">
-        <h1 class="glitch" data-text="Encrypt the Future">Encrypt the Future</h1>
-    </div>
-    <script src="script.js"></script>
+  <div class="preloader">Encrypting...</div>
+
+  <main class="container">
+    <h1 class="glitch" data-text="Eventum Shield">Eventum Shield</h1>
+    <p class="subtitle">Post-Quantum Encryption for a Post-Truth World.</p>
+
+    <form action="https://formspree.io/f/yourcode" method="POST" class="signup-form">
+      <input type="email" name="email" placeholder="Join the encrypted list" required />
+      <button type="submit">Encrypt Me</button>
+    </form>
+
+    <a href="playground.html" class="btn">Try the Playground</a>
+
+    <label class="toggle-sound">
+      <input type="checkbox" id="soundToggle"> Ambient Sound
+    </label>
+  </main>
+
+  <audio id="ambient" loop>
+    <source src="ambient.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
 </body>
 </html>
