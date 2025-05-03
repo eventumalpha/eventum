@@ -1,13 +1,22 @@
-function encrypt() {
-  const input = document.getElementById("inputText").value;
-  if (!input.trim()) {
-    alert("Please enter a message to encrypt.");
+function encryptMessage() {
+  const message = document.getElementById("message").value;
+  const key = document.getElementById("key").value;
+  const output = document.getElementById("output");
+
+  if (!message || !key) {
+    output.value = "Please enter both a message and a key.";
     return;
   }
 
-  // Basic mock encryption using Base64 + simple salt
-  const salt = "eventum2025";
-  const salted = salt + input + salt;
-  const encrypted = btoa(salted); // Encode to base64
-  document.getElementById("outputText").value = encrypted;
+  let encrypted = '';
+  for (let i = 0; i < message.length; i++) {
+    const charCode = message.charCodeAt(i) ^ key.charCodeAt(i % key.length);
+    encrypted += String.fromCharCode(charCode);
+  }
+
+  output.value = btoa(encrypted);
+}
+
+function toggleBankMode() {
+  document.body.classList.toggle("bank-mode");
 }
