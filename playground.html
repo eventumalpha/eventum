@@ -3,32 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Eventum Playground</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <title>Encryption Playground - Eventum</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="eventum-logo.png" />
 </head>
-<body class="playground">
+<body>
   <header>
-    <a href="index.html"><img src="logo.svg" class="logo small" alt="Logo"/></a>
-    <h1>Encryption Playground</h1>
-    <p>Try live post-quantum encryption below:</p>
+    <img src="eventum-logo.png" alt="Eventum Logo" class="logo"/>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="playground.html" class="active">Playground</a>
+      <a href="about.html">About</a>
+    </nav>
   </header>
 
-  <main>
-    <textarea id="message" placeholder="Enter your message..."></textarea>
-    <button class="btn neon" onclick="encryptMessage()">Encrypt</button>
-    <div id="output-box" class="output-box"></div>
+  <main class="playground">
+    <h1>Encryption Playground</h1>
+    <textarea id="input" placeholder="Enter your message..."></textarea>
+    <div class="btn-group">
+      <button onclick="encrypt()">Encrypt</button>
+      <button onclick="decrypt()">Decrypt</button>
+    </div>
+    <textarea id="output" placeholder="Result will appear here..." readonly></textarea>
   </main>
 
-  <div class="bank-mode-toggle">
-    <label>
-      <input type="checkbox" id="bankModeToggle" onchange="toggleBankMode()" />
-      Bank Mode
-    </label>
-  </div>
-
   <footer>
-    <p>Encryption powered by Eventum Shield.</p>
+    <p>&copy; 2025 Eventum. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
