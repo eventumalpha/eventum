@@ -2,26 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Eventum Playground</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Encryption Playground - Eventum</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="eventum-logo.png" />
 </head>
 <body>
   <header>
-    <div class="logo glitch" data-text="Eventum">Eventum</div>
-    <a href="index.html" class="back-link">Back to Home</a>
+    <img src="eventum-logo.png" alt="Eventum Logo" class="logo"/>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="playground.html" class="active">Playground</a>
+      <a href="about.html">About</a>
+    </nav>
   </header>
 
-  <section class="playground">
-    <h2>Encryption Playground</h2>
-    <input type="text" id="message" placeholder="Enter your message" />
-    <input type="text" id="key" placeholder="Enter a key" />
-    <button onclick="encryptMessage()">Encrypt</button>
-    <p>Encrypted Output:</p>
-    <textarea id="output" readonly></textarea>
-  </section>
+  <main class="playground">
+    <h1>Encryption Playground</h1>
+    <textarea id="input" placeholder="Enter your message..."></textarea>
+    <div class="btn-group">
+      <button onclick="encrypt()">Encrypt</button>
+      <button onclick="decrypt()">Decrypt</button>
+    </div>
+    <textarea id="output" placeholder="Result will appear here..." readonly></textarea>
+  </main>
 
   <footer>
-    &copy; 2025 Eventum.
+    <p>&copy; 2025 Eventum. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
