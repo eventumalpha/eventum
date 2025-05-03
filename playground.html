@@ -1,33 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
   <title>Eventum Playground</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>Eventum Encryption Playground</h1>
-    <textarea id="input" placeholder="Type your message..."></textarea>
+  <header>
+    <div class="logo glitch" data-text="Eventum">Eventum</div>
+    <a href="index.html" class="back-link">Back to Home</a>
+  </header>
+
+  <section class="playground">
+    <h2>Encryption Playground</h2>
+    <input type="text" id="message" placeholder="Enter your message" />
+    <input type="text" id="key" placeholder="Enter a key" />
     <button onclick="encryptMessage()">Encrypt</button>
-    <textarea id="output" placeholder="Encrypted message..." readonly></textarea>
-  </div>
+    <p>Encrypted Output:</p>
+    <textarea id="output" readonly></textarea>
+  </section>
 
-  <script>
-    function encryptMessage() {
-      const input = document.getElementById('input').value;
-      if (!input.trim()) {
-        alert('Please enter a message to encrypt.');
-        return;
-      }
+  <footer>
+    &copy; 2025 Eventum.
+  </footer>
 
-      // Basic demonstration of encryption: reverse the string and base64 encode
-      const reversed = input.split('').reverse().join('');
-      const encrypted = btoa(reversed);
-
-      document.getElementById('output').value = encrypted;
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
