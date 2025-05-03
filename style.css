@@ -1,4 +1,118 @@
 body {
-  background: #0f0f0f;
-  color: #e6e6e6;
-  font-family: 'Segoe
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0e0e0e;
+  color: #fff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #1c1c1c;
+}
+
+.logo {
+  height: 40px;
+}
+
+nav a {
+  margin-left: 20px;
+  color: #ccc;
+  text-decoration: none;
+}
+
+nav a.active, nav a:hover {
+  color: #fff;
+  border-bottom: 2px solid #00ffc3;
+}
+
+.hero {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: #121212;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero .btn {
+  padding: 0.8rem 2rem;
+  background: #00ffc3;
+  color: #000;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.features {
+  padding: 2rem;
+}
+
+.features .grid {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.features .grid div {
+  background: #1f1f1f;
+  padding: 1rem;
+  flex: 1;
+  min-width: 200px;
+  border-left: 4px solid #00ffc3;
+}
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  background: #1c1c1c;
+  font-size: 0.9rem;
+}
+
+.playground {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  background: #222;
+  color: #0f0;
+  border: 1px solid #444;
+  resize: vertical;
+}
+
+.btn-group {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  padding: 0.7rem 1.5rem;
+  background: #00ffc3;
+  border: none;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+}
+
+.about {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+ul {
+  list-style-type: square;
+  padding-left: 1.5rem;
+}
